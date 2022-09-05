@@ -1,0 +1,427 @@
+{
+	"info": {
+		"_postman_id": "b572b800-895f-4c49-b2d1-1429289861ed",
+		"name": "Fonyou",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7886291"
+	},
+	"item": [
+		{
+			"name": "Preguntas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/fonyou/preguntas/buscar?idExamen=1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fonyou",
+						"preguntas",
+						"buscar"
+					],
+					"query": [
+						{
+							"key": "idExamen",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Respuestas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/fonyou/respuestas/buscar?idEstudiante=2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fonyou",
+						"respuestas",
+						"buscar"
+					],
+					"query": [
+						{
+							"key": "idEstudiante",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Examenes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/fonyou/examenes/buscar?id=1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fonyou",
+						"examenes",
+						"buscar"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Estudiantes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/fonyou/estudiantes/buscar?id=1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fonyou",
+						"estudiantes",
+						"buscar"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Evaluaciones",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/fonyou/evaluaciones/buscar?idEstudiante=2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fonyou",
+						"evaluaciones",
+						"buscar"
+					],
+					"query": [
+						{
+							"key": "idEstudiante",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pregunta_Alta",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"pregunta\":\"Cual es una fruta\",\r\n    \"respuestaUno\":\"jitomate\",\r\n    \"respuestaDos\":\"cebolla\",\r\n    \"respuestaTres\":\"platano\",\r\n    \"respuestaCuatro\":\"papa\",\r\n    \"respuestaCorrecta\":\"platano\",\r\n    \"porcentaje\":\"50\",\r\n    \"idExamen\":\"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/fonyou/preguntas/alta",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fonyou",
+						"preguntas",
+						"alta"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Estudiante_Alta",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\":\"Christian\",\r\n    \"edad\":\"23\",\r\n    \"ciudad\":\"Francia\",\r\n    \"zonaHoraria\":\"Francia\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/fonyou/estudiantes/alta",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fonyou",
+						"estudiantes",
+						"alta"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Evaluacion_Alta",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idEstudiante\":\"2\",\r\n    \"idExamen\":\"1\",\r\n    \"fechaExamen\":\"2022-08-30\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/fonyou/evaluaciones/alta",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fonyou",
+						"evaluaciones",
+						"alta"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Examen_Alta",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"descripcion\":\"Examen de matematicas\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/fonyou/examenes/alta",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fonyou",
+						"examenes",
+						"alta"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Respuesta_Alta",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idEstudiante\":\"2\",\r\n    \"idExamen\":\"1\",\r\n    \"idPregunta\":\"1\",\r\n    \"respuesta\":\"delfin\",\r\n    \"calificacion\":\"50\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/fonyou/respuestas/alta",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fonyou",
+						"respuestas",
+						"alta"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pruebas_alta_examen",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"descripcion\":\"Examen de fisica\",\r\n    \"preguntas\":[\r\n        {\r\n            \"pregunta\":\"Capital de Michoacan\",\r\n            \"respuestaUno\":\"Morelia\",\r\n            \"respuestaDos\":\"Uruapan\",\r\n            \"respuestaTres\":\"Patzcuaro\",\r\n            \"respuestaCuatro\":\"Quiroga\",\r\n            \"respuestaCorrecta\":\"Morelia\",\r\n            \"porcentaje\":\"60\"\r\n        },\r\n        {\r\n            \"pregunta\":\"10 mas 5\",\r\n            \"respuestaUno\":\"25\",\r\n            \"respuestaDos\":\"10\",\r\n            \"respuestaTres\":\"15\",\r\n            \"respuestaCuatro\":\"5\",\r\n            \"respuestaCorrecta\":\"15\",\r\n            \"porcentaje\":\"40\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/fonyou/pruebas/crearexamen",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fonyou",
+						"pruebas",
+						"crearexamen"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pruebas_alta_estudiante",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\":\"Christian Reyes\",\r\n    \"edad\":\"28\",\r\n    \"ciudad\":\"Mexico\",\r\n    \"zonaHoraria\":\"America/Argentina/Buenos_Aires\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/fonyou/pruebas/crearestudiante",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fonyou",
+						"pruebas",
+						"crearestudiante"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pruebas_agendar_evaluacion",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idEstudiante\":[5],\r\n    \"idExamen\":\"5\",\r\n    \"fechaExamen\":\"2022-09-05\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/fonyou/pruebas/agendarevaluacion",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fonyou",
+						"pruebas",
+						"agendarevaluacion"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pruebas_responder_examen",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idEstudiante\":\"5\",\r\n    \"idExamen\":\"5\",\r\n    \"respuestas\":[\r\n        {\r\n            \"idPregunta\" : 8,\r\n            \"respuesta\" : \"Morelia\"\r\n        },\r\n        {\r\n            \"idPregunta\" : 9,\r\n            \"respuesta\" : \"10\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/fonyou/pruebas/responderexamen",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fonyou",
+						"pruebas",
+						"responderexamen"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pruebas_consulta_examen",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/fonyou/pruebas/consultarexamen?id=5",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fonyou",
+						"pruebas",
+						"consultarexamen"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
